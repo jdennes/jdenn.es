@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title="Hey, I'm James Dennes"
+    %link{:href => '/screen.css', :media => 'all', :rel => 'stylesheet', :type => 'text/css'}
+    %script{:type => "text/javascript", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"}
+  %body
+    #container
+      #header
+        %h1
+          %a{:href => '/'}="Hey, I'm James Dennes"
+      #content= yield
+      #footer
+        ="I made this using things like"
+        %a{:href => "http://www.ruby-lang.org/", :target => "_blank"}="Ruby"
+        =", "
+        %a{:href => "http://www.sinatrarb.com/", :target => "_blank"}="Sinatra"
+        =", and "
+        %a{:href => "http://www.jquery.com/", :target => "_blank"}="jQuery"
+        =". All the code is freely available on "
+        %a{:href => '#'}="GitHub"
+        ="."
