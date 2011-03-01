@@ -5,6 +5,7 @@ $main-font-colour: #5c5c5c;
 $link-colour: #06c;
 $link-underline-colour: #3d3d3d;
 $lighter-grey: #707070;
+$alternate-link-colour: #66b2ff;
 
 html, body {
   font: {
@@ -29,7 +30,8 @@ a {
 
 #header {
   h1 {
-    font: { weight: bold; size: 3.8em; }
+    letter-spacing: -0.05em;
+    font: { weight: bold; size: 3.5em; }
     a { border: none; }
     text-shadow: $link-underline-colour 1px 1px 1px;
   }
@@ -53,25 +55,35 @@ h2 {
   clear: both;
   overflow: auto;
   margin: 10px auto 4px auto;
-  line-height: 20px;
+  border-bottom: 1px solid $link-underline-colour;
   ul {
     list-style: none;
     li {
+      display: inline;
       font-size: 20px;
-      line-height: 20px;
       float: left;
-      padding: 6px 14px 6px 0;
-      a { color: $link-colour; }
-      a.current { border-bottom-color: $lighter-grey; }
+      a {
+        float: left;
+        margin: 0 18px 0 0;
+        padding: 0 0 10px 0;
+        border: none;
+        &:hover {
+          color: $alternate-link-colour;
+          border-bottom: 4px solid $link-underline-colour;
+        }
+      }
+      a.current {
+        color: $alternate-link-colour;
+        border-bottom: 4px solid $alternate-link-colour;
+      }
     }
   }
 }
 
 #jscontent {
-  padding: 6px 0;
   #snapping, #reading, #tweeting, #listening, #coding, #running {
     display: none;
-    p { font-size: 14px; margin: 10px 0 20px 0; }
+    p { font-size: 14px; margin: 16px 0 20px 0; }
   }
   #snapping .content {
     a { border: none; }

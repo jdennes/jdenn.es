@@ -2,7 +2,7 @@
   $.fn.greader = function(options) {
     var defaults = {
       user_id: '10795563111833728553',
-      number: 20
+      number: 10
     },
     settings = $.extend({}, defaults, options),
     url = 'http://www.google.com/reader/public/javascript/user/' + settings.user_id + '/state/com.google/broadcast?n=' + settings.number + '&callback=?',
