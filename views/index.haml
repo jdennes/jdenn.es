@@ -1,22 +1,38 @@
 #intro
   ="I run. I code. I skateboard. I'm a vegetarian. I work at"
   %a{:href => "http://www.campaignmonitor.com/", :target => "_blank"}="Campaign Monitor"
-  =". I have fun. :)"
+  =". Find out more below! :)"
 
-#nav
-  %ul
-    %li
-      %a{:href => "#snapping"}="snapping"
-    %li
-      %a{:href => "#reading"}="reading"
-    %li
-      %a{:href => "#tweeting"}="tweeting"
-    %li
-      %a{:href => "#listening"}="listening"
-    %li
-      %a{:href => "#coding"}="coding"
-    %li
-      %a{:href => "#running"}="running"
+= partial :nav
 
 #jscontent
-  ="This is where stuff changes according to what's clicked..."
+  #snapping
+    %p
+      Photos I take and share on
+      %a{:href => "http://www.flickr.com/photos/jdennes", :target => "_blank"}="Flickr"
+    .content
+  #reading
+    %p
+      Articles and blog posts I read and share using
+      %a{:href => "http://www.google.com/reader/shared/jdennes", :target => "_blank"}="Google Reader"
+    .content
+  #tweeting
+    %p
+      Thoughts I share on
+      %a{:href => "http://twitter.com/jdennes", :target => "_blank"}="Twitter"
+    .content
+  #listening
+    %p
+      Music I listen to and share using
+      %a{:href => "http://www.last.fm/user/jdennes", :target => "_blank"}="Last.fm"
+    .content
+  #coding
+    %p
+      Code I write and share on
+      %a{:href => "https://github.com/jdennes", :target => "_blank"}="GitHub"
+    .content
+  #running
+    %p
+      Running I track and share using
+      %a{:href => "http://www.dailymile.com/people/jdennes/", :target => "_blank"}="dailymile"
+    .content

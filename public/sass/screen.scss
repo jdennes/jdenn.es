@@ -25,7 +25,7 @@ a {
   text-decoration: none;
   border-bottom: 1px solid $link-underline-colour;
   &:hover { border-bottom-color: $link-hover-underline-colour; }
-  padding-bottom: 2px;
+  padding-bottom: 1px;
 }
 
 #container {
@@ -73,17 +73,21 @@ h2 {
       line-height: 20px;
       float: left;
       padding: 6px 14px 6px 0;
+      a.current {
+        border-bottom: 2px solid $link-hover-underline-colour;
+      }
     }
   }
 }
 
 #jscontent {
   padding: 10px 0;
+  #snapping, #reading, #tweeting, #listening, #coding, #running { display: none; }
+  
 }
 
 #footer {
   padding: 6px 0;
   border-top: 1px solid $link-underline-colour;
   font-size: 13px;
-  a { padding-bottom: 1px; }
 }

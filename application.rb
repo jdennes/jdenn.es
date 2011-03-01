@@ -4,6 +4,12 @@ configure do
   set :views, "#{File.dirname(__FILE__)}/views"
 end
 
+helpers do
+  def partial(name, locals={})
+    haml "_#{name}".to_sym, :layout => false, :locals => locals
+  end
+end
+
 before do
   content_type :html, :charset => 'utf-8'
 end
