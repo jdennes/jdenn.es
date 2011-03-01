@@ -3,7 +3,6 @@
 $main-bg-colour: #111;
 $main-font-colour: #5c5c5c;
 $link-colour: #06c;
-$link-shadow-colour: #05a;
 $link-underline-colour: #3d3d3d;
 $lighter-grey: #707070;
 
@@ -32,7 +31,7 @@ a {
   h1 {
     font: { weight: bold; size: 3.8em; }
     a { border: none; }
-    text-shadow: $lighter-grey 1px 1px 1px;
+    text-shadow: $link-underline-colour 1px 1px 1px;
   }
 }
 
