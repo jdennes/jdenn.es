@@ -13,18 +13,18 @@ function registerNavLinks() {
   $("#nav a").click(function() { show($(this).attr("id").substring(2)); });
 }
 
-function loadSnapping() {
-  $('#snapping .content').flickr();
-}
-
-function loadReading() {
-  $('#reading .content').greader();
+function loadSnapping() { $('#snapping .content').flickr(); }
+function loadReading() { $('#reading .content').greader(); }
+function loadRunning() { $('#running .content').dailymile(); }
+function loadData() {
+  loadSnapping();
+  loadReading();
+  loadRunning();
 }
 
 $(document).ready(function() {
   registerNavLinks();
-  loadSnapping();
-  loadReading();
+  loadData();
 
   if (window.location.hash && $(window.location.hash).length) {
     show(window.location.hash.substring(1));
