@@ -15,7 +15,7 @@
       $.each(data.items, function(i, item) {
         html.push('<li>');
         var pd = new Date(item.published * 1000);
-        html.push('<a class="item-title" href="' + item.alternate.href + '">' + item.title + '</a><br /><span class="item-details">' + 
+        html.push('<a class="item-title" href="' + item.alternate.href + '">' + item.title + '</a><br /><span class="item-details">&mdash; ' + 
           (item.author == undefined ? '' : 'by ' + item.author + ' ') + 'via <a href="' + item.origin.htmlUrl + '">' + item.origin.title + 
           '</a> (' + pd.getDate() + '/' + (pd.getMonth() + 1) + '/' + pd.getFullYear() + ')</span>');
         html.push('</li>');

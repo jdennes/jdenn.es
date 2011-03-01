@@ -5,12 +5,7 @@ $main-font-colour: #5c5c5c;
 $link-colour: #06c;
 $link-shadow-colour: #05a;
 $link-underline-colour: #3d3d3d;
-$link-hover-underline-colour: #5f5f5f;
-
-* {
-  margin: 0;
-  padding: 0;
-}
+$lighter-grey: #707070;
 
 html, body {
   font: {
@@ -24,7 +19,7 @@ a {
   color: $link-colour;
   text-decoration: none;
   border-bottom: 1px solid $link-underline-colour;
-  &:hover { border-bottom-color: $link-hover-underline-colour; }
+  &:hover { border-bottom-color: $lighter-grey; }
 }
 
 #container {
@@ -35,20 +30,14 @@ a {
 
 #header {
   h1 {
-    font: {
-      weight: bold;
-      size: 3.8em;
-    }
+    font: { weight: bold; size: 3.8em; }
     a { border: none; }
-    text-shadow: $link-hover-underline-colour 1px 1px 1px;
+    text-shadow: $lighter-grey 1px 1px 1px;
   }
 }
 
 h2 {
-  font: {
-    weight: bold;
-    size: 1.5em;
-  }
+  font: { weight: bold; size: 1.5em; }
 }
 
 #content {
@@ -69,10 +58,12 @@ h2 {
   ul {
     list-style: none;
     li {
+      font-size: 20px;
       line-height: 20px;
       float: left;
       padding: 6px 14px 6px 0;
-      a.current { border-bottom-color: $link-hover-underline-colour; }
+      a { color: $link-colour; }
+      a.current { border-bottom-color: $lighter-grey; }
     }
   }
 }
@@ -81,11 +72,22 @@ h2 {
   padding: 6px 0;
   #snapping, #reading, #tweeting, #listening, #coding, #running {
     display: none;
-    p { font-size: 14px; margin-bottom: 8px; }
+    p { font-size: 14px; margin: 10px 0 20px 0; }
   }
   #snapping .content {
     a { border: none; }
     img { width: 75px; height: 75px; font-size: 8px; margin: 0 4px 4px 0; }
+  }
+  #reading .content {
+    li {
+      line-height: 20px;
+      margin-bottom: 10px;
+      span.item-details {
+        color: $lighter-grey;
+        font-size: 14px;
+        padding-top: 6px;
+      }
+    }
   }
 }
 
