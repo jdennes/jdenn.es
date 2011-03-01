@@ -25,11 +25,16 @@ function registerNavLinks() {
   $("#a-running").click(function() { show("running"); });
 }
 
+function loadSnapping() {
+  $('#snapping .content').flickr();
+}
+
 $(document).ready(function() {
   registerNavLinks();
   
   // TODO: Load all the content asynchronously using the respective 
   // individual scripts/jQuery plugins...
+  loadSnapping();
   
   if (window.location.hash && $(window.location.hash).length) {
     show(window.location.hash.substring(1));
