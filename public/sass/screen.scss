@@ -154,7 +154,28 @@ h2 {
     }
   }
   #coding .content > ul > li {
-      margin-bottom: 10px;
+    margin-bottom: 12px;
+  }
+  #coding .content {
+    .item-details {
+      margin-top: 6px;
+      font-size: 13px;
+      line-height: 18px;
+    }
+    .grav {
+      float: left;
+      margin-right: 10px;
+      img {
+        width: 34px; height: 34px;
+        border: 1px solid $link-underline-colour;
+        &:hover { 
+          border: 1px solid $splash;
+        }
+      }
+    }
+    .item-details {
+      margin-left: 44px;
+    }
   }
 }
 
