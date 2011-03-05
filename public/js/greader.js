@@ -7,7 +7,6 @@
     settings = $.extend({}, defaults, options),
     url = 'http://www.google.com/reader/public/javascript/user/' + settings.user_id + '/state/com.google/broadcast?n=' + settings.number + '&callback=?',
     displayElement = $(this);
-
     displayElement.empty();
     $.getJSON(url, function(data) {
       var html = [];
