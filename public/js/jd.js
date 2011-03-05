@@ -25,8 +25,8 @@ function hideAll() {
 
 function show(id) {
   hideAll();
-  $("#" + id).show();
   $("#a-" + id).attr("class", "current");
+  $("#" + id).show();
 }
 
 function registerNavLinks() {
@@ -37,12 +37,14 @@ function loadSnapping() { $('#snapping .content').flickr(); }
 function loadReading() { $('#reading .content').greader(); }
 function loadTweeting() { $('#tweeting .content').twitter(); }
 function loadListening() { $("#listening .content").lastfm(); }
+function loadCoding() { $("#coding .content").github(); }
 function loadRunning() { $('#running .content').dailymile(); }
 function loadData() {
   loadSnapping();
   loadReading();
   loadTweeting();
   loadListening();
+  loadCoding();
   loadRunning();
 }
 
