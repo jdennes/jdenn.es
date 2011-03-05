@@ -109,6 +109,28 @@ h2 {
       }
     }
   }
+  #tweeting .content {
+    li {
+      height: 36px;
+      line-height: 20px;
+      margin-bottom: 10px;
+      span.prefix {
+        float: left;
+        margin-right: 10px;
+        a { border: none; }
+        img {
+          width: 34px; height: 34px;
+          border: 1px solid $link-underline-colour;
+          &:hover { 
+            border: 1px solid $splash;
+          }
+        }
+      }
+      span.time {
+        font-size: 13px;
+      }
+    }
+  }
   #listening .content {
     li {
       height: 36px;

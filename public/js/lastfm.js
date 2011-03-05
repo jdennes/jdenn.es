@@ -31,7 +31,7 @@
         if (item.hasOwnProperty('@attr')) { nowPlaying = item['@attr']['nowplaying']; }
         var when = prettyDate(time);
         html.push('<li>');
-        html.push('<span class="art"><a class="song-title" href="' + songUrl + '" target="_blank"><img src="' + art + '" alt="' + album + '" /></a></span>');
+        html.push('<span class="art"><a class="song-title" href="' + songUrl + '" target="_blank"><img width="34" height="34" src="' + art + '" alt="' + album + '" /></a></span>');
         html.push('<span class="details"><a class="song-title" href="' + songUrl + '" target="_blank">' + song + '</a> &mdash; ' + artist + '</span><br />' + 
           '<span class="when">' + (nowPlaying == "true" ? '<img width="12" height="12" src="http://cdn.last.fm/flatness/global/icon_eq.gif" alt="Now playing" /> ' : '') + 
             (when == undefined && nowPlaying == "true" ? "Now playing" : when) + '</span>');

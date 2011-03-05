@@ -35,11 +35,13 @@ function registerNavLinks() {
 
 function loadSnapping() { $('#snapping .content').flickr(); }
 function loadReading() { $('#reading .content').greader(); }
+function loadTweeting() { $('#tweeting .content').twitter(); }
 function loadListening() { $("#listening .content").lastfm(); }
 function loadRunning() { $('#running .content').dailymile(); }
 function loadData() {
   loadSnapping();
   loadReading();
+  loadTweeting();
   loadListening();
   loadRunning();
 }
