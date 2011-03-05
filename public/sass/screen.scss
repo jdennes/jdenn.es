@@ -25,7 +25,7 @@ a {
 #container {
   margin: 0 auto;
   padding: 0 30px;
-  width: 795px;
+  width: 810px;
 }
 
 #header {
@@ -119,6 +119,7 @@ h2 {
         margin-right: 10px;
         a { border: none; }
         img {
+          width: 34px; height: 34px;
           border: 1px solid $link-underline-colour;
           &:hover { 
             border: 1px solid $splash;

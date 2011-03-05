@@ -3,7 +3,7 @@
     var defaults = {
       api_key: "ab1352e7326fe6d5d9b1130cc0441b9b",
       id: '99761031@N00',
-      number: 50
+      number: 60
     },
     settings = $.extend({}, defaults, options),
     url = "http://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&format=json&page=1" +
