@@ -2,10 +2,10 @@
 
 $main-bg-colour: #111;
 $main-font-colour: #5c5c5c;
-$link-colour: #06c;
+$off-white: #f6f6f6;
+$splash: #1ebfd7;
 $link-underline-colour: #3d3d3d;
 $lighter-grey: #707070;
-$alternate-link-colour: #66b2ff;
 
 html, body {
   font: {
@@ -16,7 +16,7 @@ html, body {
 }
 
 a {
-  color: $link-colour;
+  color: $splash;
   text-decoration: none;
   border-bottom: 1px solid $link-underline-colour;
   &:hover { border-bottom-color: $lighter-grey; }
@@ -30,12 +30,18 @@ a {
 
 #header {
   h1 {
+    margin-top: 16px;
     letter-spacing: -0.05em;
     font: { weight: bold; size: 3.5em; }
-    a { border: none; }
+    a {
+      border: none;
+      &:hover { text-shadow: $lighter-grey 1px 1px 1px; }
+    }
     text-shadow: $link-underline-colour 1px 1px 1px;
   }
 }
+
+#intro { margin: 10px 0 28px 0; }
 
 h2 {
   font: { weight: bold; size: 1.5em; }
@@ -44,10 +50,6 @@ h2 {
 #content {
   margin: 10px 0;
   margin-bottom: 10px;
-}
-
-#intro {
-  margin-top: 10px;
 }
 
 #nav {
@@ -60,21 +62,22 @@ h2 {
     list-style: none;
     li {
       display: inline;
-      font-size: 20px;
+      font-size: 24px;
       float: left;
       a {
+        color: $off-white;
         float: left;
         margin: 0 18px 0 0;
         padding: 0 0 10px 0;
         border: none;
         &:hover {
-          color: $alternate-link-colour;
+          color: $splash;
           border-bottom: 4px solid $link-underline-colour;
         }
       }
       a.current {
-        color: $alternate-link-colour;
-        border-bottom: 4px solid $alternate-link-colour;
+        color: $splash;
+        border-bottom: 4px solid $splash;
       }
     }
   }
@@ -104,6 +107,7 @@ h2 {
 
 #footer {
   padding: 6px 0;
+  margin-bottom: 16px;
   border-top: 1px solid $link-underline-colour;
   font-size: 13px;
 }
