@@ -177,6 +177,29 @@ h2 {
       margin-left: 44px;
     }
   }
+  #running .content {
+    li {
+      height: 36px;
+      line-height: 20px;
+      margin-bottom: 10px;
+      .details {
+        height: 36px;
+        line-height: 20px;
+        margin-bottom: 10px;
+      }
+      .icon {
+        float: left;
+        margin-right: 10px;
+        img {
+          width: 34px; height: 34px;
+          border: 1px solid $link-underline-colour;
+          &:hover { 
+            border: 1px solid $splash;
+          }
+        }
+      }
+    }
+  }
 }
 
 #footer {

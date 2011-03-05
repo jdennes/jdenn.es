@@ -15,7 +15,7 @@
         html.push('<li>');
         html.push('<div class="grav"><img src="' + grav + '" width="34" height="34" /></div>');
         // Add 8 hours to utime, as it's not in GMT
-        html.push('<a href="' + item.link + '">' + prettyDate(parseInt(item["y:published"].utime) + 28800) + ' ' + 
+        html.push('<a target="_blank" href="' + item.link + '">' + prettyDate(parseInt(item["y:published"].utime) + 28800) + ' ' + 
           item.title + '</a><div class="item-details">' +item.content.content + '</div>');
         html.push('</li>');
       });
