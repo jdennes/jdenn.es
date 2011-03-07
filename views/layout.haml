@@ -12,6 +12,7 @@
     %script{:type => "text/javascript", :src => "/js/github.js"}
     %script{:type => "text/javascript", :src => "/js/dailymile.js"}
     %script{:type => "text/javascript", :src => "/js/jd.js"}
+    = partial :google_analytics if production?
   %body
     #container
       #header
