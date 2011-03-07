@@ -5,14 +5,17 @@
     %link{:rel => 'shortcut icon', :href => '/favicon.ico'}
     %link{:href => '/screen.css', :media => 'all', :rel => 'stylesheet', :type => 'text/css'}
     %script{:type => "text/javascript", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"}
-    %script{:type => "text/javascript", :src => "/js/flickr.js"}
-    %script{:type => "text/javascript", :src => "/js/greader.js"}
-    %script{:type => "text/javascript", :src => "/js/twitter.js"}
-    %script{:type => "text/javascript", :src => "/js/lastfm.js"}
-    %script{:type => "text/javascript", :src => "/js/github.js"}
-    %script{:type => "text/javascript", :src => "/js/dailymile.js"}
-    %script{:type => "text/javascript", :src => "/js/jd.js"}
-    = partial :google_analytics if production?
+    -if production? 
+      %script{:type => "text/javascript", :src => "/js/jd.min.js"}
+      = partial :google_analytics
+    -else
+      %script{:type => "text/javascript", :src => "/js/flickr.js"}
+      %script{:type => "text/javascript", :src => "/js/greader.js"}
+      %script{:type => "text/javascript", :src => "/js/twitter.js"}
+      %script{:type => "text/javascript", :src => "/js/lastfm.js"}
+      %script{:type => "text/javascript", :src => "/js/github.js"}
+      %script{:type => "text/javascript", :src => "/js/dailymile.js"}
+      %script{:type => "text/javascript", :src => "/js/jd.js"}
   %body
     #container
       #header
