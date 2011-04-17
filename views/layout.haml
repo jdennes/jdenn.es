@@ -1,12 +1,12 @@
 !!!
 %html
   %head
-    %title="Hey, I'm James Dennes"
+    %title="A website belonging to James Dennes"
     %link{:rel => 'shortcut icon', :href => '/favicon.ico'}
-    %link{:href => '/screen.css', :media => 'all', :rel => 'stylesheet', :type => 'text/css'}
+    %link{:href => "/screen.css?v=#{media_version}", :media => 'all', :rel => 'stylesheet', :type => 'text/css'}
     %script{:type => "text/javascript", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"}
     -if production? 
-      %script{:type => "text/javascript", :src => "/js/jd.min.js"}
+      %script{:type => "text/javascript", :src => "/js/jd.min.js?v=#{media_version}"}
       = partial :google_analytics
     -else
       %script{:type => "text/javascript", :src => "/js/flickr.js"}
@@ -20,10 +20,10 @@
     #container
       #header
         %h1
-          %a{:href => '/'}="Hey, I'm James Dennes"
+          %a{:href => '/'}="A website belonging to James Dennes"
         #intro
           I run. I code. I skateboard. I'm a vegetarian. I work at <a href="http://www.campaignmonitor.com/" target="_blank">Campaign Monitor</a>. I have fun!
         
       #content= yield
       #footer
-        I made this using things like <a href="http://www.ruby-lang.org/" target="_blank">Ruby</a>, <a href="http://www.sinatrarb.com/" target="_blank">Sinatra</a>, and <a href="http://www.jquery.com/" target="_blank">jQuery</a>. All the code is freely available on <a href="https://github.com/jdennes/jdenn.es" target="_blank">GitHub</a>.
+        I made this using things like <a href="http://www.ruby-lang.org/" target="_blank">Ruby</a>, <a href="http://www.sinatrarb.com/" target="_blank">Sinatra</a>, and <a href="http://www.jquery.com/" target="_blank">jQuery</a>. All the code is freely available on <a href="https://github.com/jdennes/jdenn.es" target="_blank">GitHub</a>. Sometimes I <a href="http://blog.jdenn.es" target="_blank">blog</a> too.

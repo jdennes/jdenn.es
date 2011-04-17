@@ -30,9 +30,9 @@ a {
 
 #header {
   h1 {
-    margin-top: 16px;
+    margin-top: 10px;
     letter-spacing: -0.05em;
-    font: { weight: bold; size: 3.5em; }
+    font: { weight: bold; size: 2.8em; }
     a {
       border: none;
       &:hover { text-shadow: $lighter-grey 1px 1px 1px; }
@@ -41,7 +41,7 @@ a {
   }
 }
 
-#intro { margin: 10px 0 28px 0; }
+#intro { margin: 16px 0 28px 0; }
 
 h2 {
   font: { weight: bold; size: 1.5em; }

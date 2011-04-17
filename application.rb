@@ -5,6 +5,10 @@ configure do
 end
 
 helpers do
+  def media_version
+    "201104172201"
+  end
+  
   def partial(name, locals={})
     haml "_#{name}".to_sym, :layout => false, :locals => locals
   end
