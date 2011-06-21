@@ -6,7 +6,7 @@ end
 
 helpers do
   def media_version
-    "201104172201"
+    "201106212151"
   end
   
   def partial(name, locals={})
