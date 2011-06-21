@@ -26,11 +26,15 @@ function hideAll() {
 function show(id) {
   hideAll();
   $("#a-" + id).attr("class", "current");
-  $("#" + id).show();
+  $("#" + id).fadeIn();
 }
 
 function registerNavLinks() {
-  $("#nav a").click(function() { show($(this).attr("id").substring(2)); });
+  $("#nav a").click(function(event) {
+    event.preventDefault();
+    window.location.hash = this.hash;
+    show($(this).attr("id").substring(2));
+  });
 }
 
 function loadSnapping() { $('#snapping .content').flickr(); }

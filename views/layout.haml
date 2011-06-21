@@ -4,7 +4,7 @@
     %title="James Dennes"
     %link{:rel => 'shortcut icon', :href => '/favicon.ico'}
     %link{:href => "/screen.css?v=#{media_version}", :media => 'all', :rel => 'stylesheet', :type => 'text/css'}
-    %script{:type => "text/javascript", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"}
+    %script{:type => "text/javascript", :src => "//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"}
     -if production? 
       %script{:type => "text/javascript", :src => "/js/jd.min.js?v=#{media_version}"}
       = partial :google_analytics
@@ -22,8 +22,8 @@
         %h1
           %a{:href => '/'}="A website belonging to James Dennes"
         #intro
-          I run. I code. I skateboard. I'm a vegetarian. I work at <a href="http://www.campaignmonitor.com/" target="_blank">Campaign Monitor</a>. I have fun!
+          I run. I code. I skateboard. I'm a vegetarian. I build <a href="http://www.campaignmonitor.com/" target="_blank">Campaign Monitor</a>. I have fun!
         
       #content= yield
       #footer
-        I made this using <a href="http://www.ruby-lang.org/" target="_blank">Ruby</a> and all the code is freely available on <a href="https://github.com/jdennes/jdenn.es" target="_blank">GitHub</a>. I also have a little <a href="http://blog.jdenn.es" target="_blank">blog</a> and currently take <a href="http://photoaday.jdenn.es" target="_blank">one photo every day</a>.
+        I made this using <a href="http://www.ruby-lang.org/" target="_blank">Ruby</a>. All code is freely available on <a href="https://github.com/jdennes/jdenn.es" target="_blank">GitHub</a>. I also have a little <a href="http://blog.jdenn.es" target="_blank">blog</a> and currently take <a href="http://photoaday.jdenn.es" target="_blank">one photo every day</a>.
