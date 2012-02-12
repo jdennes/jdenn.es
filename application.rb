@@ -1,12 +1,19 @@
 require 'sinatra'
+require "sinatra/reloader" if development?
+require 'haml'
+require 'sass'
 
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
 end
 
 helpers do
-  def media_version
-    "201106212151"
+  def versioned_stylesheet(style)
+    "/#{style}.css?" + File.mtime(File.join(settings.public_folder, "scss", "#{style}.scss")).to_i.to_s
+  end
+
+  def versioned_javascript(js)
+    "/js/#{js}.js?" + File.mtime(File.join(settings.public_folder, "js", "#{js}.js")).to_i.to_s
   end
   
   def partial(name, locals={})
@@ -33,7 +40,7 @@ end
 %w(reset screen).each do |style|
   get "/#{style}.css" do
     content_type :css, :charset => 'utf-8'
-    path = "public/sass/#{style}.scss"
+    path = "public/scss/#{style}.scss"
     last_modified File.mtime(path)
     scss File.read(path)
   end

@@ -2,11 +2,11 @@
 %html
   %head
     %title="James Dennes"
-    %link{:rel => 'shortcut icon', :href => '/favicon.ico'}
-    %link{:href => "/screen.css?v=#{media_version}", :media => 'all', :rel => 'stylesheet', :type => 'text/css'}
+    %link{:rel => 'icon', :href => '/favicon.png'}
+    %link{:href => versioned_stylesheet('screen'), :media => 'all', :rel => 'stylesheet', :type => 'text/css'}
     %script{:type => "text/javascript", :src => "//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"}
     -if production? 
-      %script{:type => "text/javascript", :src => "/js/jd.min.js?v=#{media_version}"}
+      %script{:type => "text/javascript", :src => versioned_javascript('jd.min')}
       = partial :google_analytics
     -else
       %script{:type => "text/javascript", :src => "/js/flickr.js"}

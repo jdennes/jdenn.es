@@ -1,3 +1,6 @@
 source :rubygems
-gem 'sinatra', '>= 1.0'
-gem 'haml', '>= 3', :require => ['haml', 'sass']
+
+gem "sinatra", "~> 1.3.1"
+gem "sinatra-reloader"
+gem "haml"
+gem "sass"
