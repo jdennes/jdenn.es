@@ -45,11 +45,7 @@ function loadCoding() { $("#coding .content").github(); }
 function loadRunning() { $('#running .content').dailymile(); }
 function loadData() {
   loadSnapping();
-  loadReading();
-  loadTweeting();
   loadListening();
-  loadCoding();
-  loadRunning();
 }
 
 $(document).ready(function() {
