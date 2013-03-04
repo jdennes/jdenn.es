@@ -15,7 +15,7 @@ helpers do
   def versioned_javascript(js)
     "/js/#{js}.js?" + File.mtime(File.join(settings.public_folder, "js", "#{js}.js")).to_i.to_s
   end
-  
+
   def partial(name, locals={})
     haml "_#{name}".to_sym, :layout => false, :locals => locals
   end
@@ -23,14 +23,6 @@ end
 
 before do
   content_type :html, :charset => 'utf-8'
-end
-
-error do
-  haml :error
-end
-
-not_found do
-  haml :not_found
 end
 
 get '/' do

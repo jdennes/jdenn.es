@@ -1,209 +1,68 @@
 @import "/reset.css";
 
-$main-bg-colour: #111;
-$main-font-colour: #5c5c5c;
-$off-white: #f6f6f6;
-$splash: #1ebfd7;
-$link-underline-colour: #3d3d3d;
-$lighter-grey: #707070;
+@font-face {
+  font-family: 'entypo-social';
+  src: url('entypo-social.eot');
+  src: url('entypo-social.eot?#iefix') format('embedded-opentype'),
+    url('entypo-social.woff') format('woff'),
+    url('entypo-social.ttf') format('truetype'),
+    url('entypo-social.svg#entypo-social') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$main-bg-colour: #ffffff;
+$main-font-colour: #444444;
+$link-colour: #777777;
+$link-hover-colour: #999999;
 
 html, body {
   font: {
-    family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    family: "Merriweather", serif;
+    size: 16px;
   }
   background: $main-bg-colour;
   color: $main-font-colour;
 }
 
 a {
-  color: $splash;
+  color: $link-colour;
   text-decoration: none;
-  border-bottom: 1px solid $link-underline-colour;
-  &:hover { border-bottom-color: $lighter-grey; }
+  border-bottom: 1px solid $link-colour;
+  &:hover {
+    color: $link-hover-colour;
+    border-bottom: 1px solid $link-hover-colour;
+  }
 }
 
 #container {
   margin: 0 auto;
-  padding: 0 30px;
-  width: 810px;
+  width: 800px;
 }
 
-#header {
-  h1 {
-    margin-top: 10px;
-    letter-spacing: -0.05em;
-    font: { weight: bold; size: 2.8em; }
-    a {
-      border: none;
-      &:hover { text-shadow: $lighter-grey 1px 1px 1px; }
-    }
-    text-shadow: $link-underline-colour 1px 1px 1px;
-  }
+h1.name {
+  font-size: 100px;
+  font-weight: bold;
+  margin-top: 160px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-#intro { margin: 16px 0 22px 0; }
-
-h2 {
-  font: { weight: bold; size: 1.5em; }
+div {
+  text-align: center;
 }
 
-#content {
-  margin: 10px 0;
-  margin-bottom: 10px;
-}
+div#links {
+  font-family: "entypo-social";
+  font-size: 70px;
+  margin-top: 30px;
+  a {
+    color: $main-font-colour;
+    text-decoration: none;
+    border-bottom: none;
+    &:hover {
+      color: $link-colour;
+    }
+  }
 
-#nav {
-  display: block;
-  clear: both;
-  overflow: auto;
-  margin: 10px auto 4px auto;
-  border-bottom: 1px solid $link-underline-colour;
-  ul {
-    list-style: none;
-    li {
-      display: inline;
-      font-size: 24px;
-      float: left;
-      a {
-        color: $off-white;
-        float: left;
-        margin: 0 18px 0 0;
-        padding: 0 0 10px 0;
-        border: none;
-        &:hover {
-          color: $splash;
-          border-bottom: 4px solid $link-underline-colour;
-        }
-      }
-      a.current {
-        color: $splash;
-        border-bottom: 4px solid $splash;
-      }
-    }
-  }
-}
-
-#jscontent {
-  #snapping, #reading, #tweeting, #listening, #coding, #running {
-    display: none;
-    p { font-size: 14px; margin: 16px 0 20px 0; }
-  }
-  #snapping .content {
-    a { border: none; }
-    img {
-      width: 75px; height: 75px; font-size: 8px; margin: 0 4px 4px 0;
-      border: 1px solid $link-underline-colour;
-      &:hover { 
-        border: 1px solid $splash;
-      }
-    }
-  }
-  #reading .content {
-    li {
-      line-height: 20px;
-      margin-bottom: 10px;
-      span.item-details {
-        color: $lighter-grey;
-        font-size: 14px;
-        padding-top: 6px;
-      }
-    }
-  }
-  #tweeting .content {
-    li {
-      height: 36px;
-      line-height: 20px;
-      margin-bottom: 10px;
-      span.prefix {
-        float: left;
-        margin-right: 10px;
-        a { border: none; }
-        img {
-          width: 34px; height: 34px;
-          border: 1px solid $link-underline-colour;
-          &:hover { 
-            border: 1px solid $splash;
-          }
-        }
-      }
-      span.time {
-        font-size: 13px;
-      }
-    }
-  }
-  #listening .content {
-    li {
-      height: 36px;
-      line-height: 20px;
-      margin-bottom: 10px;
-      span.art {
-        float: left;
-        margin-right: 10px;
-        a { border: none; }
-        img {
-          width: 34px; height: 34px;
-          border: 1px solid $link-underline-colour;
-          &:hover { 
-            border: 1px solid $splash;
-          }
-        }
-      }
-      span.when {
-        font-size: 13px;
-      }
-    }
-  }
-  #coding .content > ul > li {
-    margin-bottom: 12px;
-  }
-  #coding .content {
-    .item-details {
-      margin-top: 6px;
-      font-size: 13px;
-      line-height: 18px;
-      margin-left: 44px;
-    }
-    .grav {
-      float: left;
-      margin-right: 10px;
-      img {
-        width: 34px; height: 34px;
-        border: 1px solid $link-underline-colour;
-        &:hover { 
-          border: 1px solid $splash;
-        }
-      }
-    }
-  }
-  #running .content {
-    li {
-      height: 36px;
-      line-height: 20px;
-      margin-bottom: 10px;
-      .details {
-        height: 36px;
-        line-height: 20px;
-        margin-bottom: 10px;
-        .more-details { font-size: 13px; }
-      }
-      .icon {
-        float: left;
-        margin-right: 10px;
-        img {
-          width: 34px; height: 34px;
-          border: 1px solid $link-underline-colour;
-          &:hover { 
-            border: 1px solid $splash;
-          }
-        }
-      }
-    }
-  }
-}
-
-#footer {
-  padding: 6px 0;
-  margin-bottom: 16px;
-  border-top: 1px solid $link-underline-colour;
-  font-size: 13px;
 }

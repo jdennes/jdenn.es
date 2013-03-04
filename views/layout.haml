@@ -2,27 +2,10 @@
 %html
   %head
     %title="James Dennes"
-    %link{:rel => 'icon', :href => '/favicon.png'}
+    %link{:rel => 'shortcut icon', :href => '/favicon.ico'}
     %link{:href => versioned_stylesheet('screen'), :media => 'all', :rel => 'stylesheet', :type => 'text/css'}
-    %script{:type => "text/javascript", :src => "//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"}
-    -if production? 
-      %script{:type => "text/javascript", :src => versioned_javascript('jd.min')}
-      = partial :google_analytics
-    -else
-      %script{:type => "text/javascript", :src => "/js/flickr.js"}
-      %script{:type => "text/javascript", :src => "/js/greader.js"}
-      %script{:type => "text/javascript", :src => "/js/twitter.js"}
-      %script{:type => "text/javascript", :src => "/js/lastfm.js"}
-      %script{:type => "text/javascript", :src => "/js/github.js"}
-      %script{:type => "text/javascript", :src => "/js/dailymile.js"}
-      %script{:type => "text/javascript", :src => "/js/jd.js"}
+    %link{:href => 'http://fonts.googleapis.com/css?family=Merriweather:400,300,700,900', :rel => 'stylesheet', :type => 'text/css'}
+    = partial :google_analytics
   %body
     #container
-      #header
-        %h1
-          %a{:href => '/'}="A website belonging to James Dennes"
-        #intro
-          I make things on the web, ride skateboards, and work on <a href="http://www.campaignmonitor.com/" target="_blank">Campaign Monitor</a>, amongst other things!
-      #content= yield
-      #footer
-        I also love <a href="http://skateistan.org/" target="_blank">Skateistan</a>, have a <a href="http://blog.jdenn.es" target="_blank">blog</a> where I collect things, and once took <a href="http://photoaday.jdenn.es" target="_blank">one photo every day</a> for a year.
+      = yield

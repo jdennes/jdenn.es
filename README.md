@@ -1,3 +1,3 @@
 # jdenn.es
 
-The little app behind [http://jdenn.es]
+A tiny Sinatra app which runs [http://jdenn.es].
