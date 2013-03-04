@@ -1,12 +1,12 @@
 @import "/reset.css";
 
 @font-face {
-  font-family: 'entypo-social';
-  src: url('entypo-social.eot');
-  src: url('entypo-social.eot?#iefix') format('embedded-opentype'),
-    url('entypo-social.woff') format('woff'),
-    url('entypo-social.ttf') format('truetype'),
-    url('entypo-social.svg#entypo-social') format('svg');
+  font-family: 'jdennes';
+  src: url('jdennes.eot');
+  src: url('jdennes.eot?#iefix') format('embedded-opentype'),
+    url('jdennes.woff') format('woff'),
+    url('jdennes.ttf') format('truetype'),
+    url('jdennes.svg#jdennes') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -53,9 +53,9 @@ div {
 }
 
 div#links {
-  font-family: "entypo-social";
-  font-size: 70px;
-  margin-top: 30px;
+  font-family: "jdennes";
+  font-size: 35px;
+  margin-top: 42px;
   a {
     color: $main-font-colour;
     text-decoration: none;
@@ -63,6 +63,7 @@ div#links {
     &:hover {
       color: $link-colour;
     }
+    margin: 0 7px;
   }
 
 }
