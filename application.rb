@@ -2,6 +2,7 @@ require 'sinatra'
 require "sinatra/reloader" if development?
 require 'haml'
 require 'sass'
+require 'coffee-script'
 
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
@@ -12,8 +13,8 @@ helpers do
     "/#{style}.css?" + File.mtime(File.join(settings.public_folder, "scss", "#{style}.scss")).to_i.to_s
   end
 
-  def versioned_javascript(js)
-    "/js/#{js}.js?" + File.mtime(File.join(settings.public_folder, "js", "#{js}.js")).to_i.to_s
+  def versioned_coffeescript(script)
+    "/#{script}.js?" + File.mtime(File.join(settings.views, "#{script}.coffee")).to_i.to_s
   end
 
   def partial(name, locals={})
@@ -35,5 +36,14 @@ end
     path = "public/scss/#{style}.scss"
     last_modified File.mtime(path)
     scss File.read(path)
+  end
+end
+
+%w(application).each do |script|
+  get "/#{script}.js" do
+    content_type 'application/javascript', :charset => 'utf-8'
+    path = "views/#{script}.coffee"
+    last_modified File.mtime(path)
+    coffee script.to_sym
   end
 end
