@@ -1,5 +1,5 @@
 $ ->
-  url = 'http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%3D638242&format=json&callback=weather_callback'
+  url = "http://query.yahooapis.com/v1/public/yql?q=select%20item.condition%20from%20weather.forecast%20where%20woeid%20%3D%20638242%20and%20u%20%3D%20'c'&format=json&callback=weather_callback"
   $.ajax
     url: url,
     dataType: 'jsonp'
@@ -22,7 +22,8 @@ this.get_icon = (code) ->
 this.weather_callback = (data) ->
   if data.query.results.channel.item.condition.text? and data.query.results.channel.item.condition.code?
     text = data.query.results.channel.item.condition.text
+    temp = data.query.results.channel.item.condition.temp
     code = data.query.results.channel.item.condition.code
     icon = get_icon parseInt(code, 10)
     if icon isnt ''
-      $('span.weather-icon').html(icon).attr("title", "#{text} in Berlin right now.").show()
+      $('span.weather-icon').html(icon).attr("title", "#{text} and #{temp} degrees C in Berlin now.").show()
