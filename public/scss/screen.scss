@@ -65,12 +65,18 @@ div#links {
     }
     margin: 0 7px;
   }
-
 }
 
 span.weather-icon {
-  display: none;
   font-family: "jdennes";
   font-size: 20px;
-  cursor: default;
+  cursor: pointer;
+  a {
+    color: $main-font-colour;
+    text-decoration: none;
+    border-bottom: none;
+    &:hover {
+      color: $link-colour;
+    }
+  }
 }

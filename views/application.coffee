@@ -1,8 +1,6 @@
 $ ->
-  url = "http://query.yahooapis.com/v1/public/yql?q=select%20item.condition%20from%20weather.forecast%20where%20woeid%20%3D%20638242%20and%20u%20%3D%20'c'&format=json&callback=weather_callback"
-  $.ajax
-    url: url,
-    dataType: 'jsonp'
+  $('span.weather-icon a').click -> load_weather()
+  load_weather()
 
 this.get_icon = (code) ->
   # Mapped from: http://developer.yahoo.com/weather/#codes
@@ -26,4 +24,12 @@ this.weather_callback = (data) ->
     code = data.query.results.channel.item.condition.code
     icon = get_icon parseInt(code, 10)
     if icon isnt ''
-      $('span.weather-icon').html(icon).attr("title", "#{text} and #{temp} degrees C in Berlin now.").show()
+      $('span.weather-icon a').html(icon).attr("title", "#{text} and #{temp} degrees C in Berlin now.")
+
+this.load_weather = ->
+  callback = 'weather_callback'
+  url = "http://query.yahooapis.com/v1/public/yql?q=select%20item.condition%20from%20weather.forecast%20where%20woeid%20%3D%20638242%20and%20u%20%3D%20'c'&format=json&callback=#{callback}"
+  $('span.weather-icon a').html '&nbsp;&nbsp;&nbsp;'
+  $.ajax
+    url: url,
+    dataType: 'jsonp'
