@@ -19,7 +19,7 @@ $link-hover-colour: #999999;
 html, body {
   font: {
     family: "Merriweather", serif;
-    size: 16px;
+    size: 20px;
   }
   background: $main-bg-colour;
   color: $main-font-colour;
@@ -40,22 +40,43 @@ a {
   width: 800px;
 }
 
-h1.name {
-  font-size: 100px;
-  font-weight: bold;
-  margin-top: 160px;
-  margin-bottom: 20px;
-  text-align: center;
+div#cols {
+  margin-top: 140px;
+  width: 800px;
 }
 
-div {
-  text-align: center;
+div#left {
+  float: left;
+  width: 200px;
+  img#avatar {
+    width: 200px;
+    border-radius: 50%;
+  }
+}
+
+div#right {
+  float: right;
+  width: 540px;
+  padding-left: 40px;
+}
+
+h1.name {
+  font-size: 72px;
+  font-weight: bold;
+  margin-top: -12px;
+  margin-bottom: 20px;
+}
+
+div#summary {
+  font-size: 20px;
+  line-height: 28px;
 }
 
 div#links {
   font-family: "jdennes";
   font-size: 35px;
-  margin-top: 42px;
+  margin-top: 30px;
+  margin-left: -4px;
   a {
     color: $main-font-colour;
     text-decoration: none;
@@ -63,13 +84,13 @@ div#links {
     &:hover {
       color: $link-colour;
     }
-    margin: 0 7px;
+    margin: 0 8px;
   }
 }
 
 span.weather-icon {
   font-family: "jdennes";
-  font-size: 20px;
+  font-size: 24px;
   cursor: pointer;
   a {
     color: $main-font-colour;
