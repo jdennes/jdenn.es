@@ -23,6 +23,7 @@ html, body {
   }
   background: $main-bg-colour;
   color: $main-font-colour;
+  text-align: center;
 }
 
 a {
@@ -40,43 +41,33 @@ a {
   width: 800px;
 }
 
-div#cols {
-  margin-top: 140px;
-  width: 800px;
-}
-
-div#left {
-  float: left;
-  width: 200px;
+div#photo {
+  margin-top: 40px;
   img#avatar {
-    width: 200px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
   }
 }
 
-div#right {
-  float: right;
-  width: 540px;
-  padding-left: 40px;
-}
-
 h1.name {
-  font-size: 72px;
+  font-size: 68px;
   font-weight: bold;
-  margin-top: -12px;
-  margin-bottom: 20px;
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 
 div#summary {
+  width: 600px;
   font-size: 20px;
   line-height: 28px;
+  margin: 0 auto;
 }
 
 div#links {
   font-family: "jdennes";
   font-size: 35px;
-  margin-top: 30px;
-  margin-left: -4px;
+  margin-top: 40px;
   a {
     color: $main-font-colour;
     text-decoration: none;
@@ -84,7 +75,7 @@ div#links {
     &:hover {
       color: $link-colour;
     }
-    margin: 0 8px;
+    margin: 0 6px;
   }
 }
 
