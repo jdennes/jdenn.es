@@ -1,5 +1,4 @@
 $ ->
-  $('span.weather-icon a').click -> load_weather()
   load_weather()
 
 this.get_icon = (code) ->
