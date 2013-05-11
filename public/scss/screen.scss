@@ -12,11 +12,12 @@
 }
 
 $main-bg-colour: #ffffff;
-$main-font-colour: #444444;
+$main-font-colour: #333333;
 $link-colour: #777777;
 $link-hover-colour: #999999;
 
 html, body {
+  width: 100%; height: 100%;
   font: {
     family: "Merriweather", serif;
     size: 20px;
@@ -24,6 +25,18 @@ html, body {
   background: $main-bg-colour;
   color: $main-font-colour;
   text-align: center;
+}
+
+body {
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  display: box;
+  box-pack: center;
+  box-align: center;
 }
 
 a {
@@ -37,23 +50,13 @@ a {
 }
 
 #container {
-  margin: 0 auto;
-  width: 800px;
-}
-
-div#photo {
-  margin-top: 40px;
-  img#avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-  }
+  display: inline-block;
+  margin-top: -20%;
 }
 
 h1.name {
-  font-size: 68px;
+  font-size: 72px;
   font-weight: bold;
-  margin-top: 35px;
   margin-bottom: 35px;
 }
 
@@ -61,7 +64,6 @@ div#summary {
   width: 600px;
   font-size: 20px;
   line-height: 28px;
-  margin: 0 auto;
 }
 
 div#links {
