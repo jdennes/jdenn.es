@@ -1,3 +1,3 @@
-# jdenn.es
+# The old jdenn.es
 
-A tiny Sinatra app which runs http://jdenn.es.
+The old Sinatra app which used to run http://jdenn.es before it was [migrated](https://github.com/jdennes/jdennes.github.io) to GitHub Pages.
